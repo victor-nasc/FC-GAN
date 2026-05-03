@@ -1,0 +1,26 @@
+job: 'dev'
+
+# dataset parameters
+save_folder: './tests'
+data_path: './AID'
+sample_images: './AID/sample_data'
+
+# training parameters
+epochs: 1152
+device: 'cuda'
+batch_size: 32
+save_every: 25
+2nd_stage: True    # wheater the model is in the second stage of training 
+
+# model parameters
+c_lr: 0.0001
+g_lr: 0.0001
+gp_lambda: 5
+adv_lambda: 0.01
+content_lambda: 1
+percep_lambda: 0.1
+vgg_layers: {2: 0.1, 7: 0.1, 16: 1.0, 25: 1.0, 34: 1.0} # perceptual loss layers: weights
+
+# frequency separation
+freq_sep: true
+filter_size: 5
